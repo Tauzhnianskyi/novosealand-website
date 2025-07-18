@@ -1,0 +1,189 @@
+.header {
+  background-color: #003366;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo-title img {
+  height: 50px;
+  transition: filter 0.3s ease;
+  filter: brightness(0) invert(1); /* белый */
+}
+
+.company-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* ✅ Hover на всю область логотипа */
+.logo-title:hover img {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(89%) saturate(746%) hue-rotate(357deg) brightness(98%) contrast(101%);
+}
+
+.logo-title:hover .company-name {
+  color: #FF9233;
+}
+
+/* Контакты */
+.contact-info {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact-info a:hover {
+  color: #FF9233;
+  font-weight: bold;
+}
+
+/* Бургер меню */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+}
+
+.burger-menu span {
+  display: block;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.burger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Навбар */
+.navbar-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #003366;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #FF9233;
+  color: white;
+}
+
+/* ✅ Планшет + мобильный */
+@media (max-width: 1024px) {
+  .contact-info {
+    display: none;
+  }
+}
+
+@media (max-width: 769px) {
+  .navbar-wrapper {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #003366;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    animation: slideDown 0.3s ease;
+  }
+
+  .navbar-wrapper.open {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .company-name {
+    font-size: 1.2rem;
+  }
+
+  .header-container {
+    justify-content: space-between;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+}

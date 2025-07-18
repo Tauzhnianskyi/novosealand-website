@@ -1,0 +1,402 @@
+/* ====== GLOBAL ====== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  overflow-x: hidden; /* Убираем горизонтальный скролл */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  color: white;
+}
+
+/* ====== HEADER ====== */
+.header {
+  width: 100%;
+  background-color: #003366;
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-logo {
+  height: 50px;
+  width: auto;
+}
+
+.company-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.contact-info {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #003366;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #FF9233;
+}
+
+.burger-menu {
+  display: none;
+  font-size: 28px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ✅ Tablet and Mobile for Header */
+@media (max-width: 1024px) {
+  .contact-info {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .navbar-wrapper {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .navbar-wrapper.open {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .company-name {
+    font-size: 1.2rem;
+  }
+}
+
+/* ====== COMPANY LOGO SECTION ====== */
+.company-logo {
+  text-align: center;
+  margin-top: 160px;
+}
+
+.company-logo img {
+  max-height: 180px;
+  width: auto;
+}
+
+.logo-stats {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #003366;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ====== ABOUT SECTION ====== */
+.about-wrapper {
+  max-width: 1200px;
+  margin: 80px auto;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: flex-start;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.about-text {
+  flex: 2;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-text h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #ffa500;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: #003366;
+}
+
+/* ✅ Tablet */
+@media (max-width: 1024px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .about-text {
+    text-align: justify;
+    font-size: 1rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ✅ Mobile */
+@media (max-width: 600px) {
+  .about-wrapper {
+    padding: 20px;
+    margin: 40px auto;
+    gap: 20px;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ====== VIDEO SECTION ====== */
+.video-section {
+  padding: 50px 20px;
+  background-color: #f3f7fa;
+  text-align: center;
+}
+
+.video-section video {
+  width: 70%;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .video-section video {
+    width: 100%;
+  }
+}
+
+/* ====== GALLERY SECTION ====== */
+.gallery-container {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f3f7fb;
+}
+
+.main-image-wrapper {
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+}
+
+.thumbnail-carousel-wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.thumbnail-swiper img {
+  height: 70px;
+  width: auto;
+  border-radius: 8px;
+}
+
+/* ✅ Tablet */
+@media (max-width: 1024px) {
+  .main-image-wrapper {
+    width: 95%;
+  }
+
+  .thumbnail-swiper img {
+    height: 60px;
+  }
+}
+
+/* ✅ Mobile */
+@media (max-width: 768px) {
+  .main-image-wrapper {
+    width: 100%;
+  }
+
+  .thumbnail-swiper img {
+    height: 50px;
+  }
+}
+
+/* ====== OUR BUSINESS SECTION ====== */
+.our-business-section {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hover-box {
+  background-color: #004080;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: calc(50% - 10px);
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hover-box:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(to right, #004080, #007acc);
+}
+
+/* ✅ Tablet */
+@media (max-width: 1024px) {
+  .hover-box {
+    width: calc(50% - 10px);
+    min-height: 220px;
+  }
+}
+
+/* ✅ Mobile */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .hover-box {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+/* ====== SECTION TITLES ====== */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #ffa500;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}

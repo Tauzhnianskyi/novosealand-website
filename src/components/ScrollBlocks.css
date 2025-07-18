@@ -1,0 +1,112 @@
+.scroll-section {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.scroll-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background: linear-gradient(to right, #004080, #007acc);
+  color: white;
+  border-radius: 12px;
+  margin: 20px 0;
+  width: 90%;
+  max-width: 1200px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  overflow: hidden;
+}
+
+.scroll-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-box.from-right {
+  flex-direction: row-reverse;
+}
+
+/* ✅ Desktop Image */
+.scroll-img {
+  width: 40%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ✅ Content */
+.scroll-box-content {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scroll-box-content h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* ✅ Yellow line under headings */
+.scroll-box-content h3::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #ffa500;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.scroll-box-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* ✅ Tablet and Mobile */
+@media (max-width: 1024px) {
+  .scroll-box {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .scroll-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .scroll-box-content {
+    padding: 20px;
+  }
+
+  .scroll-box-content h3::after {
+    margin: 8px auto 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-box {
+    width: 100%;
+  }
+
+  .scroll-img {
+    height: 150px;
+  }
+
+  .scroll-box-content h3 {
+    font-size: 20px;
+  }
+
+  .scroll-box-content p {
+    font-size: 14px;
+  }
+}
