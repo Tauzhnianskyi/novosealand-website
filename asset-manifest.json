@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/novosealand/static/css/main.5f048be1.css",
+    "main.js": "/novosealand/static/js/main.095c9e1b.js",
+    "index.html": "/novosealand/index.html",
+    "main.5f048be1.css.map": "/novosealand/static/css/main.5f048be1.css.map",
+    "main.095c9e1b.js.map": "/novosealand/static/js/main.095c9e1b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f048be1.css",
+    "static/js/main.095c9e1b.js"
+  ]
+}
