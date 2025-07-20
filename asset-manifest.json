@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/novosealand-website/static/css/main.7709046d.css",
-    "main.js": "/novosealand-website/static/js/main.1ac68567.js",
+    "main.js": "/novosealand-website/static/js/main.59ed1ba2.js",
     "index.html": "/novosealand-website/index.html",
     "main.7709046d.css.map": "/novosealand-website/static/css/main.7709046d.css.map",
-    "main.1ac68567.js.map": "/novosealand-website/static/js/main.1ac68567.js.map"
+    "main.59ed1ba2.js.map": "/novosealand-website/static/js/main.59ed1ba2.js.map"
   },
   "entrypoints": [
     "static/css/main.7709046d.css",
-    "static/js/main.1ac68567.js"
+    "static/js/main.59ed1ba2.js"
   ]
 }
