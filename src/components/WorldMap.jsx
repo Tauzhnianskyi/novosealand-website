@@ -17,11 +17,11 @@ const activeCountries = new Set([
   "Italy", "Latvia", "Lithuania", "Malta", "Monaco", "Montenegro", "Netherlands", "Norway",
   "Poland", "Portugal", "Romania", "Slovenia", "Spain", "Sweden", "United Kingdom", "Georgia", 
   "Mexico", "Uruguay", "Liberia", "Côte d'Ivoire", "Togo", "Cameroon", "Bahrain",
-  "Pakistan", "Algeria"
+  "Pakistan", "Algeria", "India"
 ]);
 
 // Планируемые страны
-const plannedCountries = new Set(["United States of America", "Canada", "India"]);
+const plannedCountries = new Set(["United States of America", "Canada"]);
 
 const WorldMap = () => {
   return (
